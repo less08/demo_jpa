@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Conferences</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+</head>
+<body ng-app="conferences_form" ng-controller="ConferencesCtrl">
+<p1 data-ng-init="getConferences()">Hello world</p1>
+
+<table ng-model="conferences">
+    <tr>
+        <th>Id</th>
+        <th>Date</th>
+        <th>Description</th>
+        <th>Name</th>
+        <th>Place</th>
+    </tr>
+    <tr ng-repeat="c in conferences">
+        <td>{{c.id}}</td>
+        <td>{{c.date}}</td>
+        <td>{{c.description}}</td>
+        <td>{{c.name}}</td>
+        <td>{{c.place}}</td>
+    </tr>
+</table>
+<script type="text/javascript" src="../public/js/conferences.js"></script>
+</body>
+</html>
